@@ -1,0 +1,158 @@
+name: Locize Plans and Pricing
+description: Pricing plans for Locize localization-as-a-service platform
+specificationVersion: '0.1'
+url: https://www.locize.com/pricing/
+plans:
+  - name: Free
+    description: >-
+      Free tier for individuals and small projects to get started with
+      Locize localization management.
+    price: 0
+    currency: USD
+    billing: monthly
+    features:
+      - 100,000 standard CDN downloads
+      - 2,000 words
+      - 2 languages
+      - 5 namespaces
+      - 1 user
+      - CLI and API access
+      - 14-day full-feature trial
+  - name: Starter
+    description: >-
+      Entry-level paid plan for small teams beginning localization workflows.
+    price: 7
+    currency: USD
+    billing: monthly
+    features:
+      - 1,000,000 standard CDN downloads
+      - 15,000 words
+      - 5 languages
+      - 10 namespaces
+      - 5 users
+      - CLI and API access
+      - Email support
+  - name: Starter-Plus
+    description: >-
+      Enhanced starter plan for growing teams with more content and languages.
+    price: 19
+    currency: USD
+    billing: monthly
+    features:
+      - 3,000,000 standard CDN downloads
+      - 30,000 words
+      - 7 languages
+      - 25 namespaces
+      - 5 users
+      - CLI and API access
+      - Email support
+  - name: Growth
+    description: >-
+      Growth plan for scaling teams requiring review workflows and glossaries.
+    price: 49
+    currency: USD
+    billing: monthly
+    features:
+      - 5,000,000 standard CDN downloads
+      - 150,000 pro CDN downloads
+      - 60,000 words
+      - 10 languages
+      - 50 namespaces
+      - 10 users
+      - Review workflow
+      - Glossary
+      - CLI and API access
+  - name: Professional
+    description: >-
+      Professional plan for larger teams with SSO add-on option and unlimited users.
+    price: 99
+    currency: USD
+    billing: monthly
+    features:
+      - 7,000,000 standard CDN downloads
+      - 250,000 pro CDN downloads
+      - 100,000 words
+      - 20 languages
+      - 75 namespaces
+      - Unlimited users
+      - Review workflow
+      - Glossary
+      - SSO add-on available
+      - CLI and API access
+  - name: Professional-Plus
+    description: >-
+      Extended professional plan supporting 50 languages and 105 namespaces.
+    price: 149
+    currency: USD
+    billing: monthly
+    features:
+      - 10,000,000 standard CDN downloads
+      - 350,000 pro CDN downloads
+      - 150,000 words
+      - 50 languages
+      - 105 namespaces
+      - Unlimited users
+      - Review workflow
+      - Glossary
+      - SSO add-on available
+      - CLI and API access
+  - name: Enterprise
+    description: >-
+      Enterprise plan for large organizations with audit log, SSO included,
+      and high-volume translation support.
+    price: 199
+    currency: USD
+    billing: monthly
+    features:
+      - 15,000,000 standard CDN downloads
+      - 500,000 pro CDN downloads
+      - 200,000 words
+      - 150 languages
+      - 300 namespaces
+      - Unlimited users
+      - Audit log
+      - SSO included
+      - Review workflow
+      - Glossary
+      - CLI and API access
+      - Priority support
+overages:
+  - name: Standard CDN Downloads
+    price: 5.00
+    unit: per 1,000,000 downloads
+  - name: Pro CDN Downloads
+    price: 5.00
+    unit: per 100,000 downloads
+  - name: Private Downloads
+    price: 5.00
+    unit: per 10,000 downloads
+  - name: Words (Enterprise)
+    price: 5.00
+    unit: per 10,000 words
+  - name: Branches
+    price: 5.00
+    unit: per 5 branches
+  - name: Tenants
+    price: 10.00
+    unit: per 5 tenants
+addons:
+  - name: SAML SSO
+    price: 20.00
+    unit: per month
+  - name: Standard Backup
+    price: 8.00
+    unit: per month
+  - name: Pro Backup
+    price: 25.00
+    unit: per month
+  - name: Locize AI
+    price: 0.000008
+    unit: per token
+  - name: Locize MT (Machine Translation)
+    price: 0.000030
+    unit: per character
+trial:
+  available: true
+  duration: 14 days
+  creditCardRequired: false
+  description: All plans include a 14-day free trial with full features, no credit card required.

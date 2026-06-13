@@ -1,0 +1,71 @@
+name: Locize
+description: >-
+  Locize is a localization-as-a-service platform built by the creators of
+  i18next that connects developers, product managers, and translators to
+  deliver translation updates continuously without requiring app redeployment.
+  The platform provides a comprehensive REST API for managing translation
+  namespaces, keys, importing and exporting translations, and version
+  management across multiple languages and environments. Locize supports
+  native i18next integration along with any i18n library and workflow, and
+  offers CLI tooling, CDN delivery, AI-assisted translation, and in-context
+  editing for a complete developer-friendly localization lifecycle.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/locize/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+aid: locize
+tags:
+  - Localization
+  - Internationalization
+  - i18n
+  - Translation Management
+  - Translation
+  - i18next
+  - Developer Tools
+  - CDN
+  - SaaS
+apis:
+  - name: Locize REST API
+    description: >-
+      The Locize REST API enables developers to programmatically manage
+      translation namespaces, keys, languages, and versions. It supports
+      fetching and updating translations via CDN endpoints, reporting missing
+      or used translation keys, bulk importing and exporting locales, and
+      managing project users and tenant configurations.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.locize.com/docs/integration/api/
+    baseURL: https://api.locize.app
+    tags:
+      - Localization
+      - Translation
+      - i18n
+      - REST API
+    properties:
+      - type: Documentation
+        url: https://www.locize.com/docs/integration/api/
+      - type: OpenAPI
+        url: https://www.locize.com/docs/integration/api/
+common:
+  - type: Website
+    url: https://www.locize.com/
+  - type: Documentation
+    url: https://www.locize.com/docs/integration/api/
+  - type: GitHubOrg
+    url: https://github.com/locize
+  - type: Blog
+    url: https://www.locize.com/blog/
+  - type: Pricing
+    url: https://www.locize.com/pricing/
+  - type: X
+    url: https://x.com/locize
+  - type: Plans
+    url: plans/locize-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/locize-rate-limits.yml
+  - type: FinOps
+    url: finops/locize-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

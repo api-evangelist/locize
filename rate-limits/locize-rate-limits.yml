@@ -1,0 +1,96 @@
+name: Locize Rate Limits
+description: Rate limits and usage constraints for the Locize REST API
+specificationVersion: '0.1'
+url: https://www.locize.com/docs/integration/api/
+limits:
+  - name: Batch Update Key Limit
+    description: >-
+      Maximum number of translation keys that can be submitted in a single
+      bulk update request. For large updates, requests must be batched to
+      stay within this limit.
+    value: 1000
+    unit: keys per request
+    scope: request
+    endpoints:
+      - POST /update translations (bulk)
+  - name: CDN Download Limits
+    description: >-
+      Monthly CDN download quotas are enforced per pricing plan. Standard CDN
+      uses api.lite.locize.app and Pro CDN uses api.locize.app. Overages are
+      billed at plan-defined rates.
+    scope: plan
+    tiers:
+      - plan: Free
+        standardCDN: 100000
+        proCDN: 0
+        unit: downloads per month
+      - plan: Starter
+        standardCDN: 1000000
+        proCDN: 0
+        unit: downloads per month
+      - plan: Starter-Plus
+        standardCDN: 3000000
+        proCDN: 0
+        unit: downloads per month
+      - plan: Growth
+        standardCDN: 5000000
+        proCDN: 150000
+        unit: downloads per month
+      - plan: Professional
+        standardCDN: 7000000
+        proCDN: 250000
+        unit: downloads per month
+      - plan: Professional-Plus
+        standardCDN: 10000000
+        proCDN: 350000
+        unit: downloads per month
+      - plan: Enterprise
+        standardCDN: 15000000
+        proCDN: 500000
+        unit: downloads per month
+  - name: Word Count Limits
+    description: >-
+      Monthly word limits for managed translations vary by plan. Words exceeding
+      the plan limit are subject to overage charges.
+    scope: plan
+    tiers:
+      - plan: Free
+        words: 2000
+        unit: words per month
+      - plan: Starter
+        words: 15000
+        unit: words per month
+      - plan: Starter-Plus
+        words: 30000
+        unit: words per month
+      - plan: Growth
+        words: 60000
+        unit: words per month
+      - plan: Professional
+        words: 100000
+        unit: words per month
+      - plan: Professional-Plus
+        words: 150000
+        unit: words per month
+      - plan: Enterprise
+        words: 200000
+        unit: words per month
+authentication:
+  - type: API Key
+    description: Project-scoped API key created in project settings, passed as Authorization Bearer token
+    header: Authorization
+    format: Bearer {api_key}
+  - type: Personal Access Token
+    description: User-scoped token created in user profile, works across all accessible projects
+    header: Authorization
+    format: Bearer {personal_access_token}
+notes:
+  - >-
+    For production environments, use only CDN endpoints or API keys with
+    limited permissions to minimize exposure.
+  - >-
+    Write API keys should never be exposed in client-side code or public
+    repositories.
+  - >-
+    No explicit request-per-second rate limits are documented; the primary
+    throttle mechanism is the per-plan download and word quota system.

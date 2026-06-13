@@ -1,0 +1,163 @@
+name: Locize FinOps
+description: >-
+  FinOps Framework FOCUS-aligned cost management reference for the Locize
+  localization-as-a-service platform. Covers cost allocation, usage
+  optimization, and chargeback strategies for engineering and product teams
+  using Locize APIs and CDN services.
+specificationVersion: '1.0'
+url: https://www.locize.com/pricing/
+framework: FinOps Framework
+alignment: FOCUS 1.0
+costDimensions:
+  - name: Platform Subscription
+    description: Fixed monthly plan fee for the selected Locize pricing tier
+    category: SaaS Subscription
+    billing: monthly
+    tiers:
+      - plan: Free
+        monthlyCost: 0
+        currency: USD
+      - plan: Starter
+        monthlyCost: 7
+        currency: USD
+      - plan: Starter-Plus
+        monthlyCost: 19
+        currency: USD
+      - plan: Growth
+        monthlyCost: 49
+        currency: USD
+      - plan: Professional
+        monthlyCost: 99
+        currency: USD
+      - plan: Professional-Plus
+        monthlyCost: 149
+        currency: USD
+      - plan: Enterprise
+        monthlyCost: 199
+        currency: USD
+  - name: Standard CDN Overage
+    description: >-
+      Per-million overage charge for standard CDN downloads exceeding the
+      plan's monthly included quota.
+    category: Usage-Based
+    billing: monthly
+    unitPrice: 5.00
+    unit: per 1,000,000 standard CDN downloads
+    currency: USD
+  - name: Pro CDN Overage
+    description: >-
+      Per-100K overage charge for pro CDN downloads (api.locize.app) exceeding
+      the plan's monthly included quota.
+    category: Usage-Based
+    billing: monthly
+    unitPrice: 5.00
+    unit: per 100,000 pro CDN downloads
+    currency: USD
+  - name: Private Download Overage
+    description: Charges for private namespace downloads beyond plan quotas.
+    category: Usage-Based
+    billing: monthly
+    unitPrice: 5.00
+    unit: per 10,000 private downloads
+    currency: USD
+  - name: Word Overage
+    description: Additional word storage charges for Enterprise plan beyond included quota.
+    category: Usage-Based
+    billing: monthly
+    unitPrice: 5.00
+    unit: per 10,000 words
+    currency: USD
+  - name: Branch Overage
+    description: Additional branch charges beyond plan-included branch quota.
+    category: Usage-Based
+    billing: monthly
+    unitPrice: 5.00
+    unit: per 5 branches
+    currency: USD
+  - name: Tenant Overage
+    description: Multi-tenant overage charges for additional tenant configurations.
+    category: Usage-Based
+    billing: monthly
+    unitPrice: 10.00
+    unit: per 5 tenants
+    currency: USD
+  - name: SAML SSO Add-on
+    description: Single Sign-On add-on for plans that do not include it.
+    category: Add-on
+    billing: monthly
+    unitPrice: 20.00
+    unit: per month
+    currency: USD
+  - name: Standard Backup Add-on
+    description: Standard backup service add-on for translation data protection.
+    category: Add-on
+    billing: monthly
+    unitPrice: 8.00
+    unit: per month
+    currency: USD
+  - name: Pro Backup Add-on
+    description: Professional backup service with enhanced retention for critical localization data.
+    category: Add-on
+    billing: monthly
+    unitPrice: 25.00
+    unit: per month
+    currency: USD
+  - name: AI Translation
+    description: >-
+      Locize AI translation consumption charged per token processed. Suitable
+      for estimating AI-assisted translation costs at scale.
+    category: AI/ML Usage
+    billing: usage
+    unitPrice: 0.000008
+    unit: per token
+    currency: USD
+  - name: Machine Translation
+    description: >-
+      Locize MT (machine translation) consumption charged per character.
+      Relevant for teams leveraging automated translation pipelines.
+    category: AI/ML Usage
+    billing: usage
+    unitPrice: 0.000030
+    unit: per character
+    currency: USD
+optimization:
+  - name: Match Plan to Download Volume
+    description: >-
+      Monitor monthly CDN download totals to ensure the selected plan tier
+      covers actual traffic. Upgrade before overages accumulate rather than
+      paying per-million overage fees.
+  - name: Use Standard CDN for Public Translations
+    description: >-
+      Route public-facing translation fetches to api.lite.locize.app (standard
+      CDN) instead of api.locize.app (pro CDN) to avoid higher pro CDN overage
+      costs unless pro features are required.
+  - name: Batch API Writes
+    description: >-
+      Batch translation key updates to the maximum 1,000-key limit per request
+      to reduce the number of API calls and associated operational overhead.
+  - name: Limit Write Key Exposure
+    description: >-
+      Use read-only API keys for CDN and public fetch operations. Reserve
+      write-scoped API keys for CI/CD pipelines to avoid accidental write
+      usage that could count against quotas.
+  - name: Track Word Count Growth
+    description: >-
+      Monitor word count relative to plan quota monthly. Uncontrolled key
+      proliferation drives word overages; establish a translation key
+      governance process to keep counts predictable.
+  - name: Evaluate AI vs Human Translation Cost
+    description: >-
+      Compare Locize AI ($0.000008/token) and Locize MT ($0.000030/character)
+      costs against human translation to identify where automation provides
+      cost-effective throughput without sacrificing quality.
+chargeback:
+  - dimension: Project
+    description: Locize is project-scoped; each project maps to a team or product line for direct cost attribution.
+  - dimension: Language Count
+    description: Track per-project language counts to attribute incremental costs to teams adding locales.
+  - dimension: CDN Downloads
+    description: >-
+      Download volume by project namespace can be used to allocate bandwidth
+      costs across product teams consuming translation content.
+  - dimension: Word Volume
+    description: Word counts per namespace support chargeback to content or engineering teams owning translation keys.
