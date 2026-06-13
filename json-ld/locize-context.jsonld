@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "locize": "https://www.locize.com/vocab#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "documentation": "schema:documentation",
+    "version": "schema:version",
+    "language": "schema:inLanguage",
+    "namespace": "locize:namespace",
+    "projectId": "locize:projectId",
+    "apiKey": "locize:apiKey",
+    "referenceLanguage": "locize:referenceLanguage",
+    "translated": "locize:translated",
+    "missing": "locize:missing",
+    "used": "locize:used",
+    "published": "locize:published",
+    "tenant": "locize:tenant",
+    "branch": "locize:branch",
+    "tag": "locize:tag",
+    "job": "locize:job",
+    "stats": "locize:stats",
+
+    "Project": "locize:Project",
+    "Namespace": "locize:Namespace",
+    "Language": "locize:Language",
+    "Version": "locize:Version",
+    "Translation": "locize:Translation",
+    "MissingKey": "locize:MissingKey",
+    "UsedKey": "locize:UsedKey",
+    "Tenant": "locize:Tenant",
+    "Branch": "locize:Branch",
+    "User": "schema:Person",
+    "Job": "locize:Job"
+  }
+}
