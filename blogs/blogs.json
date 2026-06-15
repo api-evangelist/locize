@@ -3,5 +3,17 @@
   "description": "Official blog from Locize covering localization, internationalization, i18next, translation workflows, and developer tooling.",
   "url": "https://www.locize.com/blog/",
   "rss": "https://www.locize.com/feed.xml",
-  "modified": "2026-06-13"
+  "modified": "2026-06-13",
+  "repo": "locize",
+  "feeds": [
+    {
+      "source": "https://github.com/locize",
+      "feed_url": "https://github.com/locize",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-06-14T20:42:17Z"
 }
