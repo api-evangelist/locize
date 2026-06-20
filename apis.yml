@@ -10,7 +10,7 @@ description: >-
   offers CLI tooling, CDN delivery, AI-assisted translation, and in-context
   editing for a complete developer-friendly localization lifecycle.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/locize/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -34,7 +34,7 @@ apis:
       fetching and updating translations via CDN endpoints, reporting missing
       or used translation keys, bulk importing and exporting locales, and
       managing project users and tenant configurations.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.locize.com/docs/integration/api/
     baseURL: https://api.locize.app
     tags:
