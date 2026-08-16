@@ -10,7 +10,7 @@
       "source": "https://www.locize.com/feed.xml",
       "feed_url": "https://www.locize.com/feed.xml",
       "title": "",
-      "saved": 0,
+      "saved": 1,
       "method": "feed"
     },
     {
@@ -18,9 +18,10 @@
       "feed_url": "https://github.com/locize",
       "title": "",
       "saved": 0,
-      "method": "none"
+      "method": "none",
+      "error": "parse_failed"
     }
   ],
-  "post_count": 21,
-  "fetched": "2026-08-06T14:08:46Z"
+  "post_count": 22,
+  "fetched": "2026-08-15T12:11:08Z"
 }
