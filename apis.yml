@@ -37,6 +37,16 @@ tags:
   - i18next
   - Developer Tools
   - CDN
+  - Software-as-a-Service
+tags_raw:
+  - Localization
+  - Internationalization
+  - i18n
+  - Translation Management
+  - Translation
+  - i18next
+  - Developer Tools
+  - CDN
   - SaaS
 apis:
   - name: Locize REST API
