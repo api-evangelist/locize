@@ -1,4 +1,4 @@
-# Locize (locize)
+# Locize
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,41 +66,108 @@
 
 Locize is a localization-as-a-service platform built by the creators of i18next that connects developers, product managers, and translators to deliver translation updates continuously without requiring app redeployment. The platform provides a comprehensive REST API for managing translation namespaces, keys, importing and exporting translations, and version management across multiple languages and environments. Locize supports native i18next integration along with any i18n library and workflow, and offers CLI tooling, CDN delivery, AI-assisted translation, and in-context editing for a complete developer-friendly localization lifecycle.
 
-- APIs.json: https://raw.githubusercontent.com/api-evangelist/locize/refs/heads/main/apis.yml
-- Naftiko: https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=locize-api-evangelist&utm_content=repo
+**Areas:** Localization · Internationalization · i18n · Translation Management · Translation · i18next · Developer Tools · CDN · Software-as-a-Service
 
-## Tags
+## Locize on APIs.io
 
-Localization, Internationalization, i18n, Translation Management, Translation, i18next, Developer Tools, CDN, SaaS
+Everything profiled for Locize is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/locize/](https://apis.io/providers/locize/)** — or go straight to one of the APIs or properties below.
 
-## APIs
+### APIs (1)
 
-- **Locize REST API** — Programmatic management of translation namespaces, keys, languages, and versions via REST endpoints. Supports CDN fetch, bulk import/export, reporting missing/used keys, and project administration.
-  - Documentation: https://www.locize.com/docs/integration/api/
-  - Base URL: https://api.locize.app
+- [Locize REST API](https://apis.io/apis/locize/locize-rest-api/) — The Locize REST API enables developers to programmatically manage translation namespaces, keys, languages, and versions. It supports fetching and updating…
 
-## Plans / Rate Limits / FinOps
+### Published properties
 
-- **Plans:** [plans/locize-plans-pricing.yml](plans/locize-plans-pricing.yml) — Seven tiers from Free ($0) through Enterprise ($199/month), plus usage-based overages for CDN downloads, words, branches, and tenants.
-- **Rate Limits:** [rate-limits/locize-rate-limits.yml](rate-limits/locize-rate-limits.yml) — 1,000 keys per batch request; per-plan CDN download and word quotas enforced monthly.
-- **FinOps:** [finops/locize-finops.yml](finops/locize-finops.yml) — FOCUS-aligned cost dimensions covering subscription, CDN overage, AI/MT usage, and chargeback by project and namespace.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### JSON-LD (1)
 
-- Created: 2026-06-13
-- Modified: 2026-06-13
+Linked-data contexts for the provider's vocabulary.
 
-## Common
+- [Locize Context](https://apis.io/jsonld/locize/locize-context/)
 
-| Type | URL |
-|------|-----|
-| Website | https://www.locize.com/ |
-| Documentation | https://www.locize.com/docs/integration/api/ |
-| GitHub Org | https://github.com/locize |
-| Blog | https://www.locize.com/blog/ |
-| Pricing | https://www.locize.com/pricing/ |
-| X (Twitter) | https://x.com/locize |
+#### Security (1)
 
-## Maintainers
+Authentication, trust centre, and vulnerability disclosure.
 
-- Kin Lane — kin@apievangelist.com
+- [Locize Domain Security](https://apis.io/security/locize/locize-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Locize Plans Pricing](https://apis.io/plans/locize/locize-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Locize Rate Limits](https://apis.io/rate-limits/locize/locize-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Locize Finops](https://apis.io/finops/locize/locize-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.locize.com/)
+- [Documentation](https://www.locize.com/docs/integration/api/)
+- [Pricing](https://www.locize.com/pricing/)
+- [Blog](https://www.locize.com/blog/)
+
+## API Evangelist rating
+
+**Kin Score 22.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 34.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 18.4 |
+
+**Agent readiness 13.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/locize/](https://apis.io/providers/locize/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Locize: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/locize/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
